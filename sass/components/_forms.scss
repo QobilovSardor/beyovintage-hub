@@ -50,6 +50,7 @@
 .form-textarea {
   height: 100px;
   padding: 12px;
+  resize: none;
 
   &::-webkit-scrollbar {
     display: none;

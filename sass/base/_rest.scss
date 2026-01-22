@@ -76,3 +76,16 @@ a {
 .hidden {
   display: none !important;
 }
+
+@media (min-width: 400px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 16px;
+  }
+
+  .card {
+    .container {
+      padding: 0;
+    }
+  }
+}
