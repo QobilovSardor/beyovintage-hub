@@ -1,0 +1,178 @@
+.input-box {
+  .flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .form-label {
+      margin-bottom: 0;
+    }
+
+    .text-muted {
+      opacity: .5;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      color: #6B7280;
+    }
+  }
+
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  color: #6B7280;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-input,
+.form-textarea {
+  border: 1px solid #D1D5DB;
+  padding: 17px 12px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #303030;
+  border-radius: 8px;
+  width: 100%;
+
+
+  &::placeholder {
+    color: #C0C5CD;
+  }
+}
+
+.form-textarea {
+  height: 100px;
+  padding: 12px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.phone-box {
+  border: 1px solid #D1D5DB;
+  padding: 0 12px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #303030;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &:focus-within {
+    border-color: #254361;
+  }
+
+  .country-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .country-code {
+      font-weight: 600;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: #6B7280;
+    }
+  }
+
+  .line {
+    width: 1px;
+    height: 20px;
+    background: #D1D5DB;
+  }
+
+  input {
+    border: none;
+    outline: none;
+
+  }
+}
+
+
+
+.custom-radio {
+  border: 0.8px solid #D1D5DB;
+  background: #D1D5DB59;
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.custom-checkbox {
+    border-radius: 8px;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #303030;
+    display: none;
+  }
+
+  .checked-img {
+    display: none;
+  }
+}
+
+.radio-input {
+  display: none;
+
+  &:checked+.custom-radio {
+    background: #fff;
+
+    .circle,
+    .checked-img {
+      display: block;
+    }
+  }
+}
+
+.date-box {
+  border: 1px solid #D1D5DB;
+  padding: 0 12px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #303030;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+  }
+}
+
+/*
+Source - https://stackoverflow.com/a
+Posted by Vitor Avanço
+Retrieved 2026-01-22, License - CC BY-SA 4.0
+*/
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}

@@ -1,0 +1,38 @@
+button {
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.add-btn {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  padding: 13px;
+  background: #13355608;
+  border: 1.5px dashed #13355633;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #30303066;
+  border-radius: 8px;
+}
+
+.btn {
+  width: 100%;
+  padding: 17px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  border-radius: 8px;
+
+  &.btn--black {
+    color: #fff;
+    background: #303030;
+  }
+
+}
