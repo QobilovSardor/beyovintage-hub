@@ -89,3 +89,15 @@ a {
     }
   }
 }
+
+.space-y-20 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.space-y-10 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

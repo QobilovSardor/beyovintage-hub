@@ -42,3 +42,56 @@
     }
   }
 }
+
+.admin-header {
+  padding: 16px 0;
+
+  &__date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #00000059;
+    margin-top: 6px;
+    display: block;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .admin-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    .admin-name {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 12px;
+
+    &-action {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid #CECECE;
+    }
+  }
+}

@@ -29,10 +29,21 @@ button {
   font-size: 16px;
   line-height: 100%;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+
 
   &.btn--black {
     color: #fff;
     background: #303030;
+
+    &:active {
+      background: linear-gradient(0deg, var(--primary, #303030), var(--primary, #303030)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
   }
 
 }

@@ -1,0 +1,11 @@
+.admin-dashboard__page {
+  header {
+    margin-bottom: 4px;
+  }
+
+  .notify-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
