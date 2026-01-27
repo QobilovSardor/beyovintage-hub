@@ -1,0 +1,16 @@
+.create-type__page {
+  height: 100dvh;
+
+  .container {
+    padding-top: 8px;
+    // height: calc(100dvh - 32px);
+  }
+
+  .create-type__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    height: calc(100dvh - 32px);
+  }
+}

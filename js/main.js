@@ -1,22 +1,3 @@
-// // phone input
-// const countryBox = document.querySelector('.country-box');
-// const countryFlag = countryBox.querySelector('.country-flag');
-// const countryCode = countryBox.querySelector('.country-code');
-
-// const countries = [
-//   { name: 'Sweden', code: '+46', flag: 'images/icons/sweden.svg' },
-//   { name: 'USA', code: '+1', flag: 'images/icons/usa.svg' },
-//   { name: 'UK', code: '+44', flag: 'images/icons/uk.svg' },
-//   { name: 'Germany', code: '+49', flag: 'images/icons/germany.svg' }
-// ];
-
-// const dropdown = document.createElement('ul');
-// dropdown.className = 'country-dropdown';
-// dropdown.style.cssText = 'display: none; position: absolute; list-style: none; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin-top: 5px; z-index: 10; width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);';
-// dropdown.innerHTML = countries.map(country => `
-//   <li>${country.name}</li>
-// `).join('');
-// dropdown.innerHTML
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".select-boxes").forEach(group => {
@@ -169,4 +150,44 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch (error) {
     console.log(error, 'upload img error');
   }
+
+  // search box
+  try {
+    const searchBox = document.querySelector('.search-box');
+    const input = searchBox.querySelector('input');
+    const clearBtn = searchBox.querySelector('.clear');
+
+    function toggleClear() {
+      if (input.value.trim().length > 0) {
+        clearBtn.classList.add('active');
+      } else {
+        clearBtn.classList.remove('active');
+      }
+    }
+
+    input.addEventListener('input', toggleClear);
+
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      clearBtn.classList.remove('active');
+      input.focus();
+    });
+
+  } catch (error) {
+    console.log(error, 'search box error');
+  }
+
+  // sort boxes
+  try {
+    const sortBoxes = document.querySelectorAll('.sort-item');
+    sortBoxes.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+
+  } catch (error) {
+    console.log(error, 'sort boxes error');
+  }
 });
+

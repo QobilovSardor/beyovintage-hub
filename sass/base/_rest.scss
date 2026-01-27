@@ -24,6 +24,10 @@ body {
   font-size: 14px;
   color: #303030;
   background-color: #F4F4F4;
+
+  &.pb-100 {
+    padding-bottom: 100px;
+  }
 }
 
 img,
@@ -66,6 +70,7 @@ a {
 
 .container {
   max-width: 343px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -100,4 +105,139 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.tabs {
+  display: flex;
+  padding: 4px;
+  background: #E9E9E9;
+  border-radius: 8px;
+
+  .tab-item {
+    text-align: center;
+    flex: 1;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    vertical-align: middle;
+
+    &.active {
+      background: #fff;
+    }
+  }
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px #0000001A;
+  padding: 12px;
+  position: relative;
+  border: 1px solid transparent;
+
+  &:focus-within {
+    border-color: #254361;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #303030;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+    &::placeholder {
+      color: #9CA3AF;
+    }
+  }
+
+  .clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.sort-boxes {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-right: -16px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sort-item {
+    padding: 7px 12px;
+    border-radius: 8px;
+    background: #FCFCFC;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    text-align: center;
+    color: #303030;
+    overflow: .4;
+    flex: 1;
+    white-space: nowrap;
+
+    &.active {
+      opacity: 1;
+      color: #fff;
+      background-color: #303030;
+    }
+  }
+}
+
+// status
+.status {
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.3px;
+
+  &--pending {
+    color: #894B00;
+    background-color: #FEF9C2;
+  }
+
+  &--assigned {
+    color: #520E92;
+    background-color: #5917952B;
+  }
+
+  &--in-progress {
+    color: #1D4EFA;
+    background-color: #fff;
+  }
+
+  &--ready {
+    color: #2A9561;
+    background-color: #fff;
+  }
+
+  &--closed {
+    color: #737373;
+    background-color: #E6E6E680;
+  }
 }

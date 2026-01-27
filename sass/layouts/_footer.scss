@@ -20,12 +20,9 @@
   background-color: #fff;
   max-width: 500px;
   padding: 13px 0;
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &__item {
     color: #6B7280;

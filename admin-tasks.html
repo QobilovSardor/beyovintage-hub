@@ -14,105 +14,176 @@
 
 <body class="pb-100">
 
-  <div class="wrapper admin-dashboard__page admin-dashboard__open-case">
-
+  <div class="wrapper admin-tasks__page">
     <!-- header -->
-    <header class="admin-header">
+    <header class="header">
       <div class="container">
-        <div class="admin-header__flex">
-          <div class="admin-header__left">
-            <img class="admin-avatar" src="images/header-avatar.svg" alt="globus">
-            <h3 class="admin-name">Hello, Fayoz!</h3>
-          </div>
-          <div class="admin-header__right">
-            <button class="admin-header__right-action">
-              <img src="images/icons/globus.svg" alt="">
-            </button>
-            <button class="admin-header__right-action">
-              <img src="images/icons/sign-out.svg" alt="">
-            </button>
-          </div>
-        </div>
-        <span class="admin-header__date">25th December, Thursday</span>
-      </div>
-    </header>
-    <!-- header -->
-
-    <!-- main -->
-    <main class="manin">
-      <div class="container space-y-10">
-        <div class="notify-cards">
-          <div class="notify-card warning">
-            <div class="notify-card__left">
-              <div class="icon">
-                <img src="images/icons/warning.svg" alt="">
-              </div>
-              <h4 class="notify-card__title">2 new </h4>
-            </div>
-            <svg class="notify-card__arrow" width="5" height="8" viewBox="0 0 5 8" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.75 0.75L3.875 3.875L0.75 7" stroke="#920E10" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="notify-card active">
-            <div class="notify-card__left">
-              <div class="icon">
-                <img src="images/icons/chat-dots.svg" alt="">
-              </div>
-              <h4 class="notify-card__title">10 active</h4>
-            </div>
-            <svg class="notify-card__arrow" width="5" height="8" viewBox="0 0 5 8" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.75 0.75L3.875 3.875L0.75 7" stroke="#920E10" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-        </div>
-        <div class="cards order-cards">
-          <div class="card flex--card">
-            <div class="count">
-              10
-            </div>
-            <h3 class="card__title">Pre-orders</h3>
-            <div class="card__icon">
-              🛒
-            </div>
-          </div>
-          <div class="card flex--card">
-            <div class="count">
-              7
-            </div>
-            <h3 class="card__title">Returns</h3>
-            <div class="card__icon">
-              📦
-            </div>
-          </div>
+        <div>
+          <h3 class="header__title">Tasks</h3>
+          <span class="header__date">25th December, Thursday</span>
         </div>
         <button class="btn btn--black">
-          <img src="images/icons/gray-plus.svg" alt="">
-          <span>New Internal Task</span>
-        </button>
-        <div class="card flex--card">
-          <h3 class="card__title">Select Upholstery</h3>
-          <div class="card__icon">
-            🧵
-          </div>
-        </div>
-        <div class="card flex--card">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M3.125 10H16.875" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M10 3.125V16.875" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </g>
+          </svg>
 
-          <h3 class="card__title">Order List</h3>
-          <div class="card__icon">
-            📋
+        </button>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="container space-y-10">
+        <div class="tabs">
+          <div class="tab-item active">Returns</div>
+          <div class="tab-item">Pre-Orders</div>
+          <div class="tab-item">Internal</div>
+        </div>
+        <div class="search-box">
+          <img src="images/icons/search.svg" alt="search">
+          <input type="text" placeholder="Search">
+          <button class="clear">
+            <svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.375 2.625L2.625 9.375" stroke="#9CA3AF" stroke-width="1" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M9.375 9.375L2.625 2.625" stroke="#9CA3AF" stroke-width="1" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="sort-boxes">
+          <div class="sort-item active">All</div>
+          <div class="sort-item">Pending</div>
+          <div class="sort-item">Assigned</div>
+          <div class="sort-item">In Progress</div>
+          <div class="sort-item">Ready</div>
+          <div class="sort-item">Handled</div>
+          <div class="sort-item">Closed</div>
+        </div>
+        <div class="task-cards">
+          <div class="task-card end-date">
+            <div class="task-card__head">
+              <h4 class="task-card__number"><span>#</span>16-0482392</h4>
+              <div class="task-card__date">
+                <img src="images/icons/calendar.svg" alt="">
+                <span>Due: 12-01-26</span>
+              </div>
+            </div>
+            <div class="flex-box">
+              <div class="flex-box__left">
+                <img src="images/icons/chair.svg" alt="">
+                <span> Dining chairs</span>
+              </div>
+            </div>
+            <div class="task-card__bottom">
+              <div class="task-card__bottom-left">
+                <span>🏬</span>
+                <span>John Doe</span>
+              </div>
+              <div class="task-card__status status status--in-progress">In progress</div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card__head">
+              <h4 class="task-card__number"><span>#</span>16-0482392</h4>
+              <div class="task-card__date">
+                <img src="images/icons/calendar.svg" alt="">
+                <span>Due: 12-01-26</span>
+              </div>
+            </div>
+            <div class="flex-box">
+              <div class="flex-box__left">
+                <img src="images/icons/chair.svg" alt="">
+                <span> Dining chairs</span>
+              </div>
+            </div>
+            <div class="task-card__bottom">
+              <div class="task-card__bottom-left">
+                <span>🏬</span>
+                <span>John Doe</span>
+              </div>
+              <div class="task-card__status status status--pending">Pending</div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card__head">
+              <h4 class="task-card__number"><span>#</span>16-0482392</h4>
+              <div class="task-card__date">
+                <img src="images/icons/calendar.svg" alt="">
+                <span>Due: 12-01-26</span>
+              </div>
+            </div>
+            <div class="flex-box">
+              <div class="flex-box__left">
+                <img src="images/icons/chair.svg" alt="">
+                <span> Dining chairs</span>
+              </div>
+            </div>
+            <div class="task-card__bottom">
+              <div class="task-card__bottom-left">
+                <span>🏬</span>
+                <span>John Doe</span>
+              </div>
+              <div class="task-card__status status status--assigned">Assigned</div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card__head">
+              <h4 class="task-card__number"><span>#</span>16-0482392</h4>
+              <div class="task-card__date">
+                <img src="images/icons/calendar.svg" alt="">
+                <span>Due: 12-01-26</span>
+              </div>
+            </div>
+            <div class="flex-box">
+              <div class="flex-box__left">
+                <img src="images/icons/chair.svg" alt="">
+                <span> Dining chairs</span>
+              </div>
+            </div>
+            <div class="task-card__bottom">
+              <div class="task-card__bottom-left">
+                <span>🏬</span>
+                <span>John Doe</span>
+              </div>
+              <div class="task-card__status status status--assigned">Assigned</div>
+            </div>
+          </div>
+          <div class="task-card task-card--closed">
+            <div class="task-card__head">
+              <h4 class="task-card__number"><span>#</span>16-0482392</h4>
+              <div class="task-card__date">
+                <img src="images/icons/calendar.svg" alt="">
+                <span>Due: 12-01-26</span>
+              </div>
+            </div>
+            <div class="flex-box">
+              <div class="flex-box__left">
+                <img src="images/icons/chair.svg" alt="">
+                <span> Dining chairs</span>
+              </div>
+            </div>
+            <div class="task-card__bottom">
+              <div class="task-card__bottom-left">
+                <span>🏬</span>
+                <span>John Doe</span>
+              </div>
+              <div class="task-card__status status status--closed">Closed</div>
+            </div>
           </div>
         </div>
       </div>
     </main>
-    <!-- main -->
+
 
     <!-- footer -->
     <footer class="bottom-panel">
-      <a href="#!" class="bottom-panel__item active">
+      <a href="admin-tasks.html" class="bottom-panel__item active">
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.5 12.5H21.0938" stroke="#6B7280" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" />
@@ -137,7 +208,7 @@
         </svg>
         <span>Cases</span>
       </a>
-      <a href="#!" class="bottom-panel__item ">
+      <a href="admin-dashboard.html" class="bottom-panel__item">
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M3.90625 21.0936H21.0938V11.7186C21.0938 11.616 21.0737 11.5144 21.0345 11.4195C20.9953 11.3247 20.9378 11.2385 20.8652 11.1659L13.0527 3.3534C12.9802 3.28076 12.894 3.22314 12.7992 3.18382C12.7043 3.1445 12.6027 3.12427 12.5 3.12427C12.3973 3.12427 12.2957 3.1445 12.2008 3.18382C12.106 3.22314 12.0198 3.28076 11.9473 3.3534L4.13477 11.1659C4.06224 11.2385 4.00473 11.3247 3.96552 11.4195C3.92631 11.5144 3.90617 11.616 3.90625 11.7186V21.0936Z"
@@ -167,7 +238,6 @@
       </a>
     </footer>
     <!-- footer -->
-
   </div>
 
   <!-- js -->
