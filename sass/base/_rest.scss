@@ -28,6 +28,10 @@ body {
   &.pb-100 {
     padding-bottom: 100px;
   }
+
+  &.pb-110 {
+    padding-bottom: 110px;
+  }
 }
 
 img,
@@ -239,5 +243,28 @@ a {
   &--closed {
     color: #737373;
     background-color: #E6E6E680;
+  }
+}
+
+.badge-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+
+  .badge {
+    padding: 7px 12px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F5F5F5;
+    border: 1px solid #0000001A;
+    color: #000000;
+    white-space: nowrap;
+    width: fit-content;
   }
 }

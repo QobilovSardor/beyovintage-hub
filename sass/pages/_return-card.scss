@@ -1,0 +1,91 @@
+.return-card__page {
+  padding-bottom: 20px;
+
+  .header {
+    &__flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__icon-box {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      span {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .delivery-cards {
+    .delivery-card {
+      border-bottom: 0;
+
+      &:last-child {
+        border-bottom: 1px dashed #0000001A;
+      }
+    }
+  }
+
+  .delivery-card {
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: 1px dashed #0000001A;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      flex-direction: row;
+
+      .badge-group {
+        margin-top: 12px;
+      }
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 140%;
+      color: #00000059;
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+
+      span,
+      a {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #303030;
+      }
+
+      a {
+        color: #2E84D7;
+        border-bottom: 1px dotted #2E84D7;
+      }
+    }
+
+  }
+}
