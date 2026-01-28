@@ -8,6 +8,12 @@
   z-index: 999;
   background-color: #F4F4F4;
   max-width: 500px;
+
+  .footer__flex-container {
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+  }
 }
 
 .bottom-panel {

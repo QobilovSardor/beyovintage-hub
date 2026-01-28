@@ -100,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const btnText = uploadBtn.childNodes[2]; // text node
 
       if (imgBoxes.length > 0) {
-        btnImg.src = "images/icons/plus.svg";
         btnText.textContent = " Attach More Photos";
       } else {
         btnImg.src = "images/icons/images.svg";

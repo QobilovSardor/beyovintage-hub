@@ -15,7 +15,6 @@
     gap: 10px;
 
     .switch-box {
-      padding: 16px 0;
       background: #F5F5F5;
       border: 1px dashed #0000001A;
       border-radius: 100px;
@@ -24,6 +23,10 @@
       font-size: 14px;
       line-height: 100%;
       cursor: pointer;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &.active {
         color: #fff;

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyo Vintage Hub</title>
+  <!-- inter font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper assigned-page">
+
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="back-btn">
+          <img src="./images/icons/arrow-left.svg" alt="arr left">
+          <span>#16-0489392</span>
+        </div>
+        <div class="header__actions">
+          <button class="header__btn  trash--primary">
+            <img src="images/icons/trash.svg" alt="trash">
+          </button>
+          <button class="header__btn close--secondary">Close</button>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+
+    <!-- main -->
+    <main class="main">
+      <div class="space-box">
+        <div class="card">
+          <div class="container">
+            <form class="card__form">
+              <div class="input-box">
+                <label class="form-label">Category</label>
+                <input type="text" class="form-input" value="Victor Creel">
+              </div>
+              <div class="input-box">
+                <label class="form-label"> Phone Number</label>
+                <div class="phone-box">
+                  <div class="country-box">
+                    <img class="country-flag" src="images/icons/sweden.svg" alt="">
+                    <span class="country-code">+46</span>
+                    <img src="images/icons/down.svg" alt="down">
+                  </div>
+                  <div class="line"></div>
+                  <input type="text" value="70 123 45 67">
+                </div>
+              </div>
+              <div class="input-box">
+                <div class="flex-box">
+                  <label class="form-label"> Email</label>
+                  <span class="option-text text-muted">Optional</span>
+                </div>
+                <input type="email" class="form-input" placeholder="example@gmail.com">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="card">
+          <div class="container">
+            <div>
+              <label class="form-label"> Customer Name</label>
+              <div class="select-boxes select-cards">
+                <div class="select-box active" data-value="wood">
+                  <div class="icon">
+                    <span>🛋️</span>
+                  </div>
+                  <h3 class="select-box__title">Wood</h3>
+                </div>
+                <div class="select-box" data-value="wood">
+                  <div class="icon">
+                    <span>🛋️</span>
+                  </div>
+                  <h3 class="select-box__title">Wood</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Subcategory</label>
+              <div class="select-boxes select-cards">
+                <div class="select-box active" data-value="wood1">
+                  <div class="icon">
+                    <img src="images/icons/chair.svg" alt="">
+                  </div>
+                  <h3 class="select-box__title">Wood</h3>
+                </div>
+                <div class="select-box" data-value="armchair">
+                  <div class="icon">
+                    <span>🛋️</span>
+                  </div>
+                  <h3 class="select-box__title">Wood</h3>
+                </div>
+                <div class="select-box" data-value="armchair1">
+                  <div class="icon">
+                    <span>🛋️</span>
+                  </div>
+                  <h3 class="select-box__title">Wood</h3>
+                </div>
+                <div class="select-box" data-value="armchair2">
+                  <div class="icon">
+                    <span>🛋️</span>
+                  </div>
+                  <h3 class="select-box__title">Wood</h3>
+                </div>
+                <div class="select-box" data-value="armchair3">
+                  <div class="icon">
+                    <span>🛋️</span>
+                  </div>
+                  <h3 class="select-box__title">Wood</h3>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="container">
+            <div>
+              <label class="form-label">Designer</label>
+              <input type="text" value="Hans Woralberg" class="form-input">
+            </div>
+            <div>
+              <label class="form-label">Quantity</label>
+              <input type="number" value="6" class="form-input">
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card">
+          <div class="container">
+            <div>
+              <div class="flex-box">
+                <label class="form-label">Photos</label>
+                <span class="text-muted">Optional</span>
+              </div>
+              <div class="selected-images" id="selectedImages">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <div class="img-box">
+                  <button class="remove">
+                    <img src="images/icons/x.svg" alt="">
+                  </button>
+                  <img src="images/selected-img.png" alt="">
+                </div>
+              </div>
+              <button class="add-btn" id="upload-img__btn">
+                <!-- <img src="images/icons/plus.svg" alt=""> -->
+                Attach More Photos
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="container">
+            <div>
+              <span class="form-label">Selected Upholstery</span>
+              <div class="select-boxes">
+                <div class="select-box circle-box">
+                  <div class="left">
+                    <div class="icon circle">
+                      <img src="images/selected-img.png" alt="">
+                    </div>
+                    <div>
+                      <h3 class="select-box__title mb-0">Tyg Afrodite 83 Pastell green</h3>
+                      <p class="select-boxes__info">1000483</p>
+                    </div>
+                  </div>
+                  <button class="btn btn--white btn--small">
+                    <img src="images/icons/circle-half.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Deadline date -->
+        <div class="card">
+          <div class="container">
+            <div>
+              <span class="form-label">Deadline date</span>
+              <div class="date-box">
+                <input type="date" value="12/01/2026">
+                <img src="images/icons/calendar.svg" alt="calendar">
+              </div>
+            </div>
+            <div>
+              <div class="flex-box">
+                <label class="form-label">Additional details</label>
+                <span class="text-muted">Optional</span>
+              </div>
+              <textarea
+                class="form-textarea">In a world where creativity knows no bounds, imagine a vibrant city filled with bustling markets, colorful street art, and the aroma of delicious food wafting through the air. Picture a serene park where laughter echoes, and friends gather for picnics under the shade of ancient trees. As the sun sets, the sky transforms into a canvas of oranges and purples, inviting everyone to unwind and share stories. This is a place where every corner holds a new adventure, and every moment is a chance to connect.</textarea>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="card">
+          <div class="container">
+            <div>
+              <label class="form-label">Delivery Option</label>
+              <div class="select-boxes select-cards">
+                <div class="select-box active" data-value="pick-store">
+                  <div class="icon">
+                    <span>🏬</span>
+                  </div>
+                  <h3 class="select-box__title">Pick Up from Store</h3>
+                </div>
+                <div class="select-box" data-value="delivery">
+                  <div class="icon">
+                    <span>🚚️</span>
+                  </div>
+                  <h3 class="select-box__title">Delivery</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Delivery Week</label>
+              <input type="number" value="23" class="form-input">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <button class="btn btn--black">Save changes</button>
+      </div>
+    </footer>
+    <!-- footer -->
+
+  </div>
+
+  <!-- js -->
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

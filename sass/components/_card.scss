@@ -87,6 +87,18 @@
     align-items: center;
     margin-bottom: 10px;
 
+    .icon-box {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+
     .form-label {
       margin-bottom: 0;
     }
@@ -124,14 +136,31 @@
     align-items: center;
     justify-content: space-between;
     border: 1px solid #D1D5DB;
-    padding: 16px;
+    padding: 0 16px;
     border-radius: 8px;
     cursor: pointer;
+    height: 69px;
 
+    .btn--small {
+      width: 40px;
+      height: 30px;
+      padding: 0;
+      border: none;
+    }
+
+    &.circle-box {
+      .select-box__title {
+        font-size: 14px;
+      }
+    }
 
     &.active {
       background-color: #303030;
       color: #fff;
+
+      .select-boxes__info {
+        color: #FFFFFF80;
+      }
 
       .custom-radio {
         background: #fff;
@@ -142,6 +171,13 @@
         }
       }
 
+    }
+
+    .select-boxes__info {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #00000080;
     }
 
     &__title {
@@ -164,22 +200,24 @@
       font-size: 20px;
       line-height: 100%;
 
+      &.circle {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+        }
+
+      }
+
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
-
-
-    &__info {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 140%;
-      color: #00000080;
-
-    }
-
   }
 }
 
@@ -195,6 +233,10 @@
     flex-direction: column;
     gap: 12px;
     height: 76px;
+  }
+
+  .select-box__title {
+    margin-bottom: 0;
   }
 }
 
@@ -451,6 +493,10 @@
 
     .pending-text {
       color: #894B00;
+    }
+
+    .assigned-text {
+      color: #520E92;
     }
   }
 

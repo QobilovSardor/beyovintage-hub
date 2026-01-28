@@ -247,6 +247,10 @@ a {
   width: fit-content;
 }
 
+.text-black {
+  color: #000;
+}
+
 .header {
   padding: 19px 0;
 }
@@ -346,6 +350,11 @@ a {
   line-height: 100%;
   color: #303030;
 }
+.go-back .small-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
 
 .footer {
   position: fixed;
@@ -357,6 +366,11 @@ a {
   z-index: 999;
   background-color: #F4F4F4;
   max-width: 500px;
+}
+.footer .footer__flex-container {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
 }
 
 .bottom-panel {
@@ -449,6 +463,13 @@ button {
   background: #303030;
 }
 .btn.btn--black:active {
+  background: linear-gradient(0deg, var(--primary, #303030), var(--primary, #303030)), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.btn.btn--white {
+  color: #303030;
+  background: #fff;
+}
+.btn.btn--white:active {
   background: linear-gradient(0deg, var(--primary, #303030), var(--primary, #303030)), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 .btn--small {
@@ -702,6 +723,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
   align-items: center;
   margin-bottom: 10px;
 }
+.card .flex-box .icon-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card .flex-box .icon-box img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
 .card .flex-box .form-label {
   margin-bottom: 0;
 }
@@ -733,13 +764,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #D1D5DB;
-  padding: 16px;
+  padding: 0 16px;
   border-radius: 8px;
   cursor: pointer;
+  height: 69px;
+}
+.select-boxes .select-box .btn--small {
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  border: none;
+}
+.select-boxes .select-box.circle-box .select-box__title {
+  font-size: 14px;
 }
 .select-boxes .select-box.active {
   background-color: #303030;
   color: #fff;
+}
+.select-boxes .select-box.active .select-boxes__info {
+  color: rgba(255, 255, 255, 0.5019607843);
 }
 .select-boxes .select-box.active .custom-radio {
   background: #fff;
@@ -747,6 +791,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .select-boxes .select-box.active .custom-radio .circle,
 .select-boxes .select-box.active .custom-radio .checked-img {
   display: block;
+}
+.select-boxes .select-box .select-boxes__info {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.5019607843);
 }
 .select-boxes .select-box__title {
   font-weight: 600;
@@ -766,16 +816,19 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   line-height: 100%;
 }
+.select-boxes .select-box .icon.circle {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+.select-boxes .select-box .icon.circle img {
+  object-fit: cover;
+}
 .select-boxes .select-box .icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-.select-boxes .select-box__info {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
-  color: rgba(0, 0, 0, 0.5019607843);
+  object-fit: contain;
 }
 
 .select-cards {
@@ -790,6 +843,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   gap: 12px;
   height: 76px;
+}
+.select-cards .select-box__title {
+  margin-bottom: 0;
 }
 
 .selected-images {
@@ -1001,6 +1057,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .flow-box__text .pending-text {
   color: #894B00;
 }
+.flow-box__text .assigned-text {
+  color: #520E92;
+}
 .flow-box__item {
   display: flex;
   flex-direction: column;
@@ -1064,7 +1123,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   gap: 10px;
 }
 .assigned-page .switches .switch-box {
-  padding: 16px 0;
   background: #F5F5F5;
   border: 1px dashed rgba(0, 0, 0, 0.1019607843);
   border-radius: 100px;
@@ -1073,6 +1131,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 14px;
   line-height: 100%;
   cursor: pointer;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .assigned-page .switches .switch-box.active {
   color: #fff;
@@ -1161,6 +1223,66 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .return-card__page .header__icon-box span {
   margin-top: 0;
 }
+.return-card__page .header__badge {
+  padding: 3px 6px;
+  background: #737373;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  color: #FFFFFF;
+  width: fit-content;
+}
+.return-card__page .header__calendar-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.return-card__page .header__calendar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(0, 0, 0, 0.3490196078);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+}
+.return-card__page .header__calendar span {
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.return-card__page .header__calendar img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.return-card__page .card .flex-box {
+  margin-bottom: 0;
+}
+.return-card__page .select-box {
+  height: 56px;
+  padding-block: 0;
+}
+.return-card__page .select-box .icon {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+.return-card__page .select-box .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.return-card__page .select-box .select-box__title {
+  font-size: 14px;
+  margin-top: 2px;
+}
+.return-card__page .select-box .select-boxes__info {
+  font-size: 12px;
+  color: rgba(41, 41, 41, 0.3490196078);
+  margin-top: 4px;
+}
 .return-card__page .delivery-cards .delivery-card {
   border-bottom: 0;
 }
@@ -1210,6 +1332,41 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .return-card__page .delivery-card__box a {
   color: #2E84D7;
   border-bottom: 1px dotted #2E84D7;
+}
+
+.change-upholstery__page {
+  margin-top: 15px;
+}
+.change-upholstery__page .go-back {
+  align-items: start;
+  margin-bottom: 23px;
+}
+.change-upholstery__page .go-back span {
+  margin-top: 3px;
+}
+.change-upholstery__page .go-back .small-text {
+  margin-top: 6px;
+}
+.change-upholstery__page .change-upholstery__go-back {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 21px 0 14px 0;
+}
+.change-upholstery__page .change-upholstery__go-back img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.change-upholstery__page .change-upholstery__go-back span {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+}
+.change-upholstery__page .select-box {
+  background: #fff;
+  height: 56px;
 }
 
 /*# sourceMappingURL=main.css.map */

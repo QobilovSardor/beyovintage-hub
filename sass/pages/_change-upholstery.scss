@@ -1,0 +1,44 @@
+.change-upholstery__page {
+  margin-top: 15px;
+
+  .go-back {
+    align-items: start;
+    margin-bottom: 23px;
+
+    span {
+      margin-top: 3px;
+    }
+
+    .small-text {
+      margin-top: 6px;
+    }
+  }
+
+  .change-upholstery {
+    &__go-back {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 21px 0 14px 0;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+      }
+    }
+
+  }
+
+  .select-box {
+    background: #fff;
+    height: 56px;
+  }
+}

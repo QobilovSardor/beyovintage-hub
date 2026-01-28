@@ -24,6 +24,79 @@
         margin-top: 0;
       }
     }
+
+    &__badge {
+      padding: 3px 6px;
+      background: #737373;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 140%;
+      color: #FFFFFF;
+      width: fit-content;
+    }
+
+    &__calendar-box {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    &__calendar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #00000059;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 140%;
+
+      span {
+        color: #00000080;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .card {
+    .flex-box {
+      margin-bottom: 0;
+    }
+  }
+
+  .select-box {
+    height: 56px;
+    padding-block: 0;
+
+    .icon {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .select-box__title {
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .select-boxes__info {
+      font-size: 12px;
+      color: #29292959;
+      margin-top: 4px;
+    }
   }
 
   .delivery-cards {
